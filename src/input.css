@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-900: #2e1065;
+  --color-purple-700: #6b21a8;
+  --color-purple-600: #9333ea;
+  --color-gold-500: #d97706;
+  --color-gold-400: #f59e0b;
+  --color-yellow-100: #fef9c3;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+}
+
+@layer components {
+  .vote-card {
+    @apply w-full max-w-3xl rounded-2xl bg-white p-8 shadow-2xl border-2 border-amber-300;
+  }
+
+  .form-control {
+    @apply w-full rounded-lg border-2 border-purple-200 px-4 py-2.5 text-purple-950 focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500/20;
+  }
+
+  .primary-button {
+    @apply rounded-lg bg-purple-700 px-6 py-2.5 font-semibold text-amber-300 transition hover:bg-purple-800 active:scale-95 shadow-md hover:shadow-purple-700/20;
+  }
+
+  .result-button {
+    @apply flex size-14 items-center justify-center rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-700 transition hover:bg-emerald-600 hover:text-white shadow-sm hover:shadow-emerald-600/20 active:scale-95;
+  }
+
+  .vote-count {
+    @apply flex size-16 items-center justify-center rounded-full bg-amber-100 border-2 border-amber-400 text-xl font-bold text-amber-900 shadow-inner;
+  }
+
+  .modal-panel {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @apply w-full max-w-sm overflow-hidden rounded-2xl bg-white p-0 shadow-2xl border border-purple-100;
+    z-index: 50;
+  }
+
+  dialog::backdrop {
+    background-color: rgba(46, 16, 101, 0.4);
+    backdrop-filter: blur(8px);
+  }
+}
