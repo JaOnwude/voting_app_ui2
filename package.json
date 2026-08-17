@@ -9,8 +9,7 @@
     "build": "bun run build:css && bun run build:js",
     "dev:css": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
     "dev:js": "bun build ./src/main.ts --outdir ./dist --watch",
-    "dev": "bun run build && bunx serve .",
-    "start": "bun run build && bunx serve . --port $PORT"
+    "dev": "bun run build && bunx serve ."
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
